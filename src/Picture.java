@@ -1,6 +1,6 @@
 public class Picture
 {
-    private Square wall;
+    private Square wall, wall2;
     private Square window;
     private Triangle roof;
     private Circle sun;
@@ -12,6 +12,7 @@ public class Picture
     public Picture()
     {
         wall = new Square();
+        wall2 = new Square();
         window = new Square();
         roof = new Triangle();
         sun = new Circle();
@@ -30,9 +31,14 @@ public class Picture
     {
         if(!drawn) {
             wall.moveHorizontal(-140);
-            wall.moveVertical(20);
-            wall.changeSize(120);
+            wall.moveVertical(-10);
+            wall.changeSize(180);
             wall.makeVisible();
+
+            wall2.moveHorizontal(-100);
+            wall2.moveVertical(-10);
+            wall2.changeSize(180);
+            wall2.makeVisible();
 
             window.changeColor("black");
             window.moveHorizontal(-120);
