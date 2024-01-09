@@ -37,7 +37,7 @@ public class Picture
 
             wall2.moveHorizontal(-100);
             wall2.moveVertical(-10);
-            wall2.changeSize(180);
+            wall2.changeSize(170);
             wall2.makeVisible();
 
             window.changeColor("black");
