@@ -1,8 +1,8 @@
 public class Picture
 {
-    private Square wall, wall2;
+    private Square wall1, wall2, wall3;
     private Square window;
-    private Triangle roof;
+    private Triangle roof1, roof2;
     private Circle sun;
     private boolean drawn;
 
@@ -11,10 +11,12 @@ public class Picture
      */
     public Picture()
     {
-        wall = new Square();
+        wall1 = new Square();
         wall2 = new Square();
+        wall3 = new Square();
         window = new Square();
-        roof = new Triangle();
+        roof1 = new Triangle();
+        roof2 = new Triangle();
         sun = new Circle();
         drawn = false;
     }
@@ -30,15 +32,23 @@ public class Picture
     public void draw()
     {
         if(!drawn) {
-            wall.moveHorizontal(-140);
-            wall.moveVertical(-10);
-            wall.changeSize(190);
-            wall.makeVisible();
+            wall1.changeColor("blue");
+            wall1.moveHorizontal(-200);
+            wall1.moveVertical(-30);
+            wall1.changeSize(100);
+            wall1.makeVisible();
 
+            wall2.changeColor("blue");
             wall2.moveHorizontal(-100);
-            wall2.moveVertical(-10);
-            wall2.changeSize(170);
+            wall2.moveVertical(-30);
+            wall2.changeSize(100);
             wall2.makeVisible();
+
+            wall3.changeColor("blue");
+            wall3.moveHorizontal(0);
+            wall3.moveVertical(-30);
+            wall3.changeSize(100);
+            wall3.makeVisible();
 
             window.changeColor("black");
             window.moveHorizontal(-120);
@@ -46,15 +56,22 @@ public class Picture
             window.changeSize(40);
             window.makeVisible();
 
-            roof.changeSize(60, 180);
-            roof.moveHorizontal(20);
-            roof.moveVertical(-60);
-            roof.makeVisible();
+            roof2.changeColor("blue");
+            roof2.changeSize(100, 50);
+            roof2.moveHorizontal(200);
+            roof2.moveVertical(-50);
+            roof2.makeVisible();
+
+            roof1.changeColor("blue");
+            roof1.changeSize(100, 50);
+            roof1.moveHorizontal(-100);
+            roof1.moveVertical(-50);
+            roof1.makeVisible();
 
             sun.changeColor("yellow");
             sun.moveHorizontal(100);
-            sun.moveVertical(-40);
-            sun.changeSize(80);
+            sun.moveVertical(-60);
+            sun.changeSize(30);
             sun.makeVisible();
             drawn = true;
         }
@@ -65,9 +82,9 @@ public class Picture
      */
     public void setBlackAndWhite()
     {
-        wall.changeColor("black");
+        wall1.changeColor("black");
         window.changeColor("white");
-        roof.changeColor("black");
+        roof1.changeColor("black");
         sun.changeColor("black");
     }
 
@@ -76,9 +93,9 @@ public class Picture
      */
     public void setColor()
     {
-        wall.changeColor("red");
+        wall1.changeColor("red");
         window.changeColor("black");
-        roof.changeColor("green");
+        roof1.changeColor("green");
         sun.changeColor("yellow");
     }
 }
