@@ -32,7 +32,7 @@ public class Picture
         if(!drawn) {
             wall.moveHorizontal(-140);
             wall.moveVertical(-10);
-            wall.changeSize(180);
+            wall.changeSize(190);
             wall.makeVisible();
 
             wall2.moveHorizontal(-100);
