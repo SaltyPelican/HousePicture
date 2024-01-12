@@ -8,6 +8,7 @@ public class Picture
     private Square window, window2, window3, window4, window5;
     private Triangle roof1, roof2, roof3, roof4, roof5, roof6;
     private Circle sun, doorknob;
+    private Person human;
     private boolean drawn;
 
     /**
@@ -45,6 +46,7 @@ public class Picture
         roof6 = new Triangle();
         sun = new Circle();
         doorknob = new Circle();
+        human = new Person();
         drawn = false;
     }
 
@@ -238,6 +240,11 @@ public class Picture
             sun.moveVertical(-80);
             sun.changeSize(30);
             sun.makeVisible();
+
+            human.moveHorizontal(160);
+            human.moveVertical(30);
+            human.makeVisible();
+
             drawn = true;
 
             /* make person object!
